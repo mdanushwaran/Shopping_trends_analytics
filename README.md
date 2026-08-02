@@ -27,4 +27,10 @@ now working down,
 <img width="1887" height="962" alt="4" src="https://github.com/user-attachments/assets/fb929f5c-8b40-45f9-83f9-d98187b99b84" />
 <img width="1917" height="892" alt="5" src="https://github.com/user-attachments/assets/d52f1a38-fd17-4600-8ce8-9f98d9dfd5ef" />
 
+**And Using Pycharm **
+<img width="1918" height="1011" alt="image" src="https://github.com/user-attachments/assets/f2c7146c-cb2d-43e2-aaaf-6367edf0b9ae" />
+<img width="1918" height="1013" alt="image" src="https://github.com/user-attachments/assets/bf0a08be-d6b7-4d70-a1b2-4cd7459fc29e" />
+<img width="1918" height="1013" alt="image" src="https://github.com/user-attachments/assets/8e22af71-a68b-424e-af1c-8826036b8f22" />
+
+<img width="1918" height="1013" alt="image" src="https://github.com/user-attachments/assets/66d5dd16-ddf8-487b-bf57-0259d951dcec" />
 
