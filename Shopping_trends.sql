@@ -138,5 +138,110 @@ select sum(purchase_amount) as Total_sales from shopping;
 select category , sum(purchase_amount) as Total_sales from shopping
 group by category;
 -----------------------------------------------------------------------------------------------
-## Level 2: Aggregate Functions (16–25)
+## Level 2: Aggregate Function.
 -----------------------------------------------------------------------------------------------
+## Find average purchase amount by gender.
+
+select Gender , Avg(purchase_amount) as Average_purchase_amount from shopping
+group by Gender;
+-----------------------------------------------------------------------------------------------
+
+## Find total sales by category.
+
+select category , sum(purchase_amount) as Total_sales from shopping
+group by category order by Total_sales desc;
+
+-----------------------------------------------------------------------------------------------
+
+## Count customers in each state.
+
+select location , count(customer_id) as Total_candicate from shopping
+group by location order by Total_candicate desc;
+-----------------------------------------------------------------------------------------------
+
+## Find highest purchase amount in each category.
+
+select category , max(purchase_amount) as highest_purchase_amount from shopping
+group by category order by highest_purchase_amount desc;
+-----------------------------------------------------------------------------------------------
+
+## Find lowest purchase amount in each season.
+
+select season , min(purchase_amount) as lowest_purchase_amount from shopping
+group by season;
+-----------------------------------------------------------------------------------------------
+
+## Find average age by gender.
+
+select Gender , avg(Age) as average_age from shopping
+group by Gender;
+
+select Gender , avg(Age) as average_age , count(customer_id) as Total_candicate from shopping
+group by Gender;
+-----------------------------------------------------------------------------------------------
+
+## Count customers by payment method.
+
+select payment_method , count(customer_id) as Total_candicate from shopping
+group by payment_method;
+-----------------------------------------------------------------------------------------------
+
+##  Find total revenue by shipping type.
+
+select shipping_type , sum(purchase_amount) as Total_revenue from shopping
+group by shipping_type;
+-----------------------------------------------------------------------------------------------
+
+## Find total purchases for each color.
+
+select color , sum(purchase_amount) as Total_purchase_amount from shopping
+group by color order by Total_purchase_amount  desc;
+
+select color , sum(purchase_amount) as Total_purchase_amount , count(customer_id) as Total_candicate from shopping
+group by color order by Total_purchase_amount  desc;
+-----------------------------------------------------------------------------------------------
+
+## Find average purchase amount for each size.
+
+select size , avg(purchase_amount) as Average_purchase_amount from shopping
+group by size order by Average_purchase_amount desc;
+
+-----------------------------------------------------------------------------------------------
+## Level 3: GROUP BY + HAVING.
+-----------------------------------------------------------------------------------------------
+
+## Categories with more than 100 customers.
+
+select category , count(customer_id) as Total_candicate from shopping
+group by category having Total_candicate > 100 order by Total_candicate desc;
+
+## or
+
+select category , count(*) as Total_candicate from shopping
+group by category having count(*) > 100 order by Total_candicate desc;
+-----------------------------------------------------------------------------------------------
+
+## States having total sales above 5000.
+
+select location , sum(purchase_amount) as Total_sales from shopping
+group by location having Total_sales > 5000 order by Total_sales desc;
+-----------------------------------------------------------------------------------------------
+
+## Payment methods with average purchase above 60.
+
+select payment_method , avg(purchase_amount) as Average_purchase_amount from shopping 
+group by payment_method having Average_purchase_amount > 60;
+-----------------------------------------------------------------------------------------------
+
+## Seasons having more than 200 orders.
+
+select season , count(customer_id) as Total_candicate from shopping
+group by season having Total_candicate >= 200 ;
+-----------------------------------------------------------------------------------------------
+
+# Colors having more than 50 purchases.
+
+select color , count(*) as Total_candicate from shopping
+group By color having count(*) > 50 order by color;
+-----------------------------------------------------------------------------------------------
+
